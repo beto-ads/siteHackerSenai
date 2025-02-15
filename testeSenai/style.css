@@ -1,0 +1,89 @@
+body {
+    background-color: black; /* Fundo preto */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Mantém o hacker no rodapé */
+    align-items: center;
+    position: relative;
+    overflow: hidden; /* Evita rolagem indesejada */
+}
+
+/* Navbar */
+.navbar {
+    position: fixed; /* Fixa no topo */
+    top: 5px; /* Pequeno espaçamento do topo */
+    left: 10px; /* Pequeno espaçamento da lateral */
+    z-index: 10; /* Mantém a logo acima dos outros elementos */
+    background: transparent; /* Remove qualquer fundo */
+}
+
+.navbar-brand img {
+    max-height: 30%; /* Ajuste o tamanho da logo */
+    width: 50vh;
+}
+
+.golpe-texto {
+    position:absolute;
+    top: 25%; /* Ajuste para posicionar no topo */
+    left: 20%;
+    transform: translateX(-20%);
+    font-size: 38px;
+    font-family: 'Press Start 2P', cursive;
+    text-transform: uppercase;
+    
+    color: white;
+    text-align: center;
+    z-index: 10; /* Mantém o texto acima dos outros elementos */
+    width: 100%; /* Garante que o texto ocupe toda a largura */
+}
+.golpe-texto::before {
+    content: "☠️"; /* Código Unicode da caveira */
+    margin-right: 25px;
+    margin-right: 1%;
+}
+
+.golpe-texto::after {
+    content: "☠️"; /* Código Unicode da caveira */
+    margin-left: 25px;
+    margin-left: 1%;
+}
+
+/* Container do hacker e do texto */
+.container-hacker {
+    position: absolute;
+    bottom: 0; /* Mantém o hacker no rodapé */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+}
+
+/* Imagem do hacker */
+.hacker-img {
+    width: 24%; /* Ajuste conforme necessário */
+    height: auto;
+    position: absolute;
+    bottom: 0; /* Mantém no rodapé */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+    z-index: 2; /* Mantém sobre a fumaça */
+}
+
+/* Fumaça cobrindo toda a tela */
+.fumaca-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150vh; /* Ajuste conforme necessário */
+    background: url('img/images-removebg-preview.png') center bottom / cover no-repeat;
+    background-size: contain;
+    opacity: 0.3; /* Ajuste para mais ou menos intensidade */
+    z-index: 2; /* Fica atrás do hacker */
+}
+
+/* Texto "Você caiu no golpe do formulário" */
+
